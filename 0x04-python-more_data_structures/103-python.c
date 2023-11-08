@@ -14,7 +14,7 @@ void print_python_bytes(PyObject *p)
 	char *temp = NULL;
 
 	printf("[.] bytes object info\n");
-	if (PyBytes_Check(p) == false)
+	if (!PyBytes_Check(p))
 	{
 		printf("  [ERROR] Invalid Bytes Object\n");
 		return;
@@ -56,7 +56,7 @@ void print_python_list(PyObject *p)
 	{
 		str_chr = (bucket->ob_item[x])->ob_type->tp_name;
 		printf("Element %x: %s\n", x, str_chr);
-		if (strcmp(str_chr, "bytes") == true)
+		if (!strcmp(str_chr, "bytes"))
 			print_python_bytes(bucket->ob_item[x]);
 
 		x++;
