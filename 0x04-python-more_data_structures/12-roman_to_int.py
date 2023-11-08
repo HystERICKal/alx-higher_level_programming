@@ -18,7 +18,7 @@ def roman_to_int(roman_string):
     i = 0
     while i < len(outer):
         final_int = final_int + outer[i]
-        if outer[i - 1] < outer[i] and i is not 0:
+        if outer[i - 1] < outer[i] and i != 0:
             final_int = final_int - (outer[i - 1] + outer[i - 1])
         i = i + 1
     return final_int
