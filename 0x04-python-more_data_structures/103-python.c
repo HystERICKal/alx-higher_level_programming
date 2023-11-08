@@ -1,7 +1,6 @@
-#include <listobject.h>
 #include <Python.h>
-#include <bytesobject.h>
 #include <object.h>
+#include <listobject.h>
 
 /**
  * print_python_bytes -  basic info about pybytes
