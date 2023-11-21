@@ -8,9 +8,7 @@ class MagicClass:
     def __init__(self, radius=0):
         """the constructor of the magic class"""
         self._MagicClass__radius = 0
-        if type(radius) is not int:
-            raise TypeError("radius must be a number")
-        elif type(radius) is not float:
+        if type(radius) is not int and type(radius) is not float:
             raise TypeError("radius must be a number")
         self._MagicClass__radius = radius
 
