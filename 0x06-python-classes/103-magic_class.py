@@ -10,13 +10,13 @@ class MagicClass:
         self._MagicClass__radius = 0
         if type(radius) is not int:
             raise TypeError("radius must be a number")
-        if type(radius) is not float:
+        elif type(radius) is not float:
             raise TypeError("radius must be a number")
         self._MagicClass__radius = radius
 
     def area(self):
         """The area of the magic class"""
-        return self._MagicClass__radius ** 2 * math.pi
+        return self._MagicClass__radius * self._MagicClass__radius * math.pi
 
     def circumference(self):
         """The circumference of the magic class"""
