@@ -36,9 +36,8 @@ class Square:
         y = 0
 
         while x < self.__size:
-            while y < self.__size:
+            for y in range(self.__size):
                 print("#", end="")
-                y += 1
             print("")
             x += 1
         if self.__size == 0:
