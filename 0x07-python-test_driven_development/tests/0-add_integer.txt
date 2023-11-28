@@ -1,0 +1,79 @@
+Testing the module
+======================
+
+Importing the 0-add_integer function
+>>> add_integer = __import__('0-add_integer').add_integer
+
+Testing 2 +ve integers
+>>> add_integer(3, 5)
+8
+
+Testing 2 -ve integers
+>>> add_integer(-6, -3)
+-9
+
+Testing for a single argument
+>>> add_integer(1)
+99
+
+Testing 2 floats
+>>> add_integer(3.0, 4.2)
+7
+
+Testing float and int
+>>> add_integer(97.3, -3)
+94
+
+Testing for strings
+>>> add_integer(6, "Car")
+Traceback (most recent call last):
+	...
+TypeError: b must be an integer
+
+Testing for Nonetypes
+>>> add_integer(None)
+Traceback (most recent call last):
+	...
+TypeError: a must be an integer
+
+Testing for strings
+>>> add_integer("Car", 24)
+Traceback (most recent call last):
+	...
+TypeError: a must be an integer
+
+Testing big number parameters
+>>> add_integer(float("inf"), 43)
+Traceback (most recent call last):
+	...
+OverflowError: cannot convert float infinity to integer
+
+Testing big number parameters
+>>> add_integer(21, float("inf"))
+Traceback (most recent call last):
+        ...
+OverflowError: cannot convert float infinity to integer
+
+Testing small number parameters
+>>> add_integer(float("-inf"), 32)
+Traceback (most recent call last):
+        ...
+OverflowError: cannot convert float infinity to integer
+
+Testing small number parameters
+>>> add_integer(76, float("-inf"))
+Traceback (most recent call last):
+        ...
+OverflowError: cannot convert float infinity to integer
+
+Testing float nan
+>>> add_integer(31, float("nan"))
+Traceback (most recent call last):
+        ...
+ValueError: cannot convert float NaN to integer
+
+Testing float nan
+>> add_integer(float("nan"), 42)
+Traceback(most recent call last):
+        ...
+ValueError: cannot convert float NaN to integer
