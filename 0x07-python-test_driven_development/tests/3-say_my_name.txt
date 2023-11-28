@@ -1,0 +1,24 @@
+Testing the function that prints first and last name
+
+Import the function
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Testing for correct output
+>>> say_my_name('Barrack', 'Obama')
+My name is Barrack Obama
+
+Testing single input
+>>> say_my_name('Eminem')
+My name is Eminem
+
+Testing input type
+>>> say_my_name(3, 'Sly')
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+
+Testing input type
+>>> say_my_name('Sheldon', 42)
+Traceback (most recent call last):
+    ...
+TypeError: last_name must be a string
