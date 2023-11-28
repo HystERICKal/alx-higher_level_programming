@@ -1,0 +1,55 @@
+Tests for square printing
+
+Import the function
+>>> print_square = __import__('4-print_square').print_square
+
+Testing correct input
+>>> print_square(10)
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+
+Testing float inputs
+>>> print_square(6.0)
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
+
+Testing negative float inputs
+>>> print_square(-7.0)
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
+    ...
+ValueError: size must be >= 0
+
+Testing negative ints
+>>> print_square(-9)
+Traceback (most recent call last):
+    ...
+ValueError: size must be >= 0
+
+Testing non ints
+>>> print_square('smile')
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
+
+Testing inf
+>>> print_square(float('inf))
+Traceback (most recent call last):
+    ...
+OverflowError: cannot convert float infinity to integer
+
+Testing -inf
+>>> print_square(float('-inf'))
+Traceback (most recent call last):
+    ...
+OverflowError: cannot convert float infinity to integer
