@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-'''
-prints first State object from the database hbtn_0e_6_usa
-'''
+'''Task 11'''
 from sys import argv
 from model_state import Base, State
 from sqlalchemy import create_engine
