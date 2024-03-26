@@ -9,8 +9,9 @@ const the_link = `https://swapi-api.hbtn.io/api/films/${digi}`;
 request(the_link, (err, res, body) => {
   if (err) {
     console.log(err);
+  } else {
+  const result = JSON.parse(body).title;
+  console.log(result);
   }
-  const output = JSON.parse(body).title;
-  console.log(output);
 });
 
