@@ -8,7 +8,7 @@ const theLink = `https://swapi-api.hbtn.io/api/films/${pass}`;
 
 request(theLink, (error, res, body) => {
   if (error) console.log(error);
-  const cast = JSON.parse(body).cast;
+  const cast = JSON.parse(body).characters;
   for (const i in cast) {
     request(cast[i], (error, res, body) => {
       if (error) console.log(error);
